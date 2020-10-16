@@ -6,6 +6,7 @@
 
 ```
 git clone git@github.com:pfan123/figma-plugin-boilerplate.git
+```
 
 ### 使用
 
