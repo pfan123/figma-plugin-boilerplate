@@ -14,7 +14,7 @@ process.on('unhandledRejection', err => {
 // Ensure environment variables are read.
 require('../config/env');
 
-
+const exec = require('child_process').execSync;
 const path = require('path');
 const chalk = require('react-dev-utils/chalk');
 const fs = require('fs-extra');
@@ -121,6 +121,14 @@ checkBrowsers(paths.appPath, isInteractive)
       }
     }
   )
+  .then(() => {
+    console.log('compile code.ts file.\n');
+    exec('npx tsc --outFile ./dist/code.js ./dist/code.ts', {stdio: 'inherit'});
+    fs.removeSync('./dist/static')
+    fs.removeSync('./dist/code.ts')
+    fs.removeSync('./dist/asset-manifest.json')
+    console.log(chalk.green('Finished!!!\n'));
+  })
   .catch(err => {
     if (err && err.message) {
       console.log(err.message);

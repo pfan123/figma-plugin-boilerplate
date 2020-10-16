@@ -1,0 +1,7 @@
+{
+  "name": "myPlugin",
+  "id": "738168449509241862",
+  "api": "1.0.0",
+  "main": "./code.js",
+  "ui": "./index.html"
+}
