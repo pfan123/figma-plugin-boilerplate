@@ -33,3 +33,5 @@ yarn run build
 - [Figma Developer Platform](https://www.figma.com/developers)
 
 - [figma / plugin-samples](https://github.com/figma/plugin-samples/tree/master/react)
+
+- [Figma Plugin API typings](https://github.com/figma/plugin-typings)
